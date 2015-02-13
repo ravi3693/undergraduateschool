@@ -1,0 +1,10 @@
+<%  @schools.each do |school| %>
+<%= form_for school do |p| %>
+<%= p.hidden_field :id %>
+<%= p.text_field :business_school%>
+	<%= p.collection_select(:state_id, @states, :id, :state) %>
+	<%= p.file_field :image %>
+	<%=p.submit %>
+<%end%>
+
+<%end%>
